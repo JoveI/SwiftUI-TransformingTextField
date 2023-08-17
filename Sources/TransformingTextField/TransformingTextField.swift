@@ -175,6 +175,7 @@ class TransformingTextFieldDelegate: NSObject {
     }
 }
 
+<<<<<<< HEAD
 extension TransformingTextFieldDelegate: UITextFieldDelegate {
     func textField(
         _ textField: UITextField,
@@ -213,6 +214,8 @@ extension TransformingTextFieldDelegate: UITextViewDelegate {
     }
 }
 
+=======
+>>>>>>> netceteragroup-main
 extension UITextInput {
     /// Abstracts the text
     var text: String {
