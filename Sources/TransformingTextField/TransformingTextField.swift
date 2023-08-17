@@ -175,47 +175,6 @@ class TransformingTextFieldDelegate: NSObject {
     }
 }
 
-<<<<<<< HEAD
-extension TransformingTextFieldDelegate: UITextFieldDelegate {
-    func textField(
-        _ textField: UITextField,
-        shouldChangeCharactersIn range: NSRange,
-        replacementString string: String
-    ) -> Bool {
-        originalDelegate?.textField(textField, shouldChangeCharactersIn: range, replacementString: string)
-        replaceCharacters(in: range, with: string)
-        // We already updated the text, binding and cursor position. Stop the default SwiftUI behavior.
-        return false
-    }
-
-    public func textFieldDidBeginEditing(textField: UITextField) {
-        originalDelegate?.textFieldDidBeginEditing(textField)
-    }
-
-    public func textFieldDidEndEditing(_ textField: UITextField) {
-        originalDelegate?.textFieldDidEndEditing(textField)
-    }
-
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        originalDelegate?.textFieldShouldReturn(textField)
-        return true
-    }
-
-    public func textFieldDidChangeSelection(_ textField: UITextField) {
-        originalDelegate?.textFieldDidChangeSelection(textField)
-    }
-}
-
-extension TransformingTextFieldDelegate: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        replaceCharacters(in: range, with: text)
-        // We already updated the text, binding and cursor position. Stop the default SwiftUI behavior.
-        return false
-    }
-}
-
-=======
->>>>>>> netceteragroup-main
 extension UITextInput {
     /// Abstracts the text
     var text: String {
